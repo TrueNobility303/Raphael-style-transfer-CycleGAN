@@ -44,6 +44,6 @@ CycleGAN源代码对于小样本风格迁移（只有36张风格图片，8张内
 
 引入SinGAN的思想训练单一内容图片的风格迁移模型,训练方式与原SinGAN相同，当每一尺度的GAN训练完后固定其参数，进行更高尺度的训练
 ```
-./myCycleGAN/train_singan.py --dataroot {$PATH} --name {$NAME} --gpu_ids {$ID}
+./myCycleGAN/train_fixgan.py --dataroot {$PATH} --name {$NAME} --gpu_ids {$ID}
 ```
 
