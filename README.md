@@ -16,7 +16,7 @@ For the training of a single content image, the Patch Permutation module in Patc
 
 ## Files
 
-As we use the source code of CycleGAN from Paper [Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks](https://arxiv.org/pdf/1703.10593v7.pdf), the code structure is almost the same as the code of CycleGAN. For the modification, you can refer to the [README.md](https://github.com/TrueNobility303/Raphael-style-transfer-CycleGAN/myCycleGAN/README.md) in the directory myCycleGAN.
+As we use the source code of CycleGAN from Paper [Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks](https://arxiv.org/pdf/1703.10593v7.pdf), the code structure is almost the same as the code of CycleGAN. For the modification, you can refer to the [README.md](https://github.com/TrueNobility303/Raphael-style-transfer-CycleGAN/blob/master/myCycleGAN%20/README.md) in the directory myCycleGAN.
 
 
 ## 摘要
