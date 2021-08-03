@@ -1,10 +1,29 @@
 # Raphael-style-transfer-CycleGAN
 
+## Abstract
+
+On the basis of CycleGAN, it has been improved to a certain extent and applied to the Raphael style transfer task.
+
+CycleGAN source code does not perform well for small sample style transfer (only 36 style pictures, 8 content pictures).
+
+In order to optimize the performance of CycleGAN, the training strategy was changed, and the receptive field (or patch size) of Patch Discriminator is improved according to our observation based on comparison experiments, so that the generated pictures are neither as detailed as photos, nor too abstract and difficult to understand. The generated picture is exactly within the scope of the painting.
+
+At the same time, in order to face the problem of few shot style transfer, we try to use single style pictures and single content pictures for CycelGAN training. On the premise of not using any data augmentation, we adopt some strategies in the classic GAN model to solve the small sample CycleGAN training problem.
+
+For the training of a single style picture, the idea and training method of SinGAN is introduced, and the multi-scale CycleGAN is used to form the overall network. And tried three training strategies for training multi-scale networks.
+
+For the training of a single content image, the Patch Permutation module in Patch Permutation GAN is also introduced.
+
+## Files
+
+As we use the source code of CycleGAN from Paper [Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks](https://arxiv.org/pdf/1703.10593v7.pdf), the code structure is almost the same as the code of CycleGAN. For the modification, you can refer to the [README.md](https://github.com/TrueNobility303/Raphael-style-transfer-CycleGAN/myCycleGAN/README.md) in the directory myCycleGAN.
+
+
 ## 摘要
 
 在CycleGAN的基础上，对其进行一定程度的改进，将其运用于Raphael风格迁移任务。
 
-CycleGAN源代码对于小样本风格迁移（只有36张风格图片，8张内容图片—）的表现不佳。
+CycleGAN源代码对于小样本风格迁移（只有36张风格图片，8张内容图片）的表现不佳。
 
 为了优化CycleGAN的表现，改动了训练策略，并且经过对比试验后改进了Patch Discriminator的感受野（Patch大小），使得生成的图片既不至于像照片一样精细，又不至于过于抽象而难以理解，使生成的图片正好位于画的范畴之内。
 
