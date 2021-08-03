@@ -18,6 +18,32 @@ For the training of a single content image, the Patch Permutation module in Patc
 
 As we use the source code of CycleGAN from Paper [Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks](https://arxiv.org/pdf/1703.10593v7.pdf), the code structure is almost the same as the code of CycleGAN. For the modification, you can refer to the [README.md](https://github.com/TrueNobility303/Raphael-style-transfer-CycleGAN/blob/master/myCycleGAN%20/README.md) in the directory myCycleGAN.
 
+## Getting Started
+
+Use the optimized CycleGAN model for training
+```
+./myCycleGAN/train.py --dataroot {$PATH} --name {$NAME} --gpu_ids {$ID}
+```
+
+Introduce the Patch Permutation module to train a style transfer model for a **single style image**
+```
+./myCycleGAN/train_p2gan.py --dataroot {$PATH} --name {$NAME} --gpu_ids {$ID}
+```
+
+Introduce the idea of SinGAN to train the style transfer model of a **single content image**, and the training strategy is different from the original SinGAN(which is an end-to-end training strategy)
+```
+./myCycleGAN/train_singan.py --dataroot {$PATH} --name {$NAME} --gpu_ids {$ID}
+```
+
+Introduce the idea of SinGAN to train the style transfer model for a **single content image**, also introduce a hierarchical feature fusion module (FFM) so that the model can obtain both high-scale content information and low-scale style information at the same time.
+```
+./myCycleGAN/train_higan.py --dataroot {$PATH} --name {$NAME} --gpu_ids {$ID}
+```
+
+Introduce the idea of SinGAN to train the style transfer model of a **single content image**. The training method is the same as the original SinGAN. When the GAN of each scale is trained, its parameters are fixed and higher-scale training is performed.
+```
+./myCycleGAN/train_fixgan.py --dataroot {$PATH} --name {$NAME} --gpu_ids {$ID}
+```
 
 ## 摘要
 
