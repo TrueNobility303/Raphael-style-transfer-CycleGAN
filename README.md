@@ -35,12 +35,12 @@ Introduce the idea of SinGAN to train the style transfer model of a **single con
 ./myCycleGAN/train_singan.py --dataroot {$PATH} --name {$NAME} --gpu_ids {$ID}
 ```
 
-Introduce the idea of SinGAN to train the style transfer model for a **single content image**, also introduce a hierarchical feature fusion module (FFM) so that the model can obtain both high-scale content information and low-scale style information at the same time.
+Introduce the idea of SinGAN to train the style transfer model for a **single content image**, also introduce a hierarchical feature fusion module (FFM) so that the model can obtain both high-scale content information and low-scale style information at the same time
 ```
 ./myCycleGAN/train_higan.py --dataroot {$PATH} --name {$NAME} --gpu_ids {$ID}
 ```
 
-Introduce the idea of SinGAN to train the style transfer model of a **single content image**. The training method is the same as the original SinGAN. When the GAN of each scale is trained, its parameters are fixed and higher-scale training is performed.
+Introduce the idea of SinGAN to train the style transfer model of a **single content image**. The training method is the same as the original SinGAN. When the GAN of each scale is trained, its parameters are fixed and higher-scale training is performed
 ```
 ./myCycleGAN/train_fixgan.py --dataroot {$PATH} --name {$NAME} --gpu_ids {$ID}
 ```
